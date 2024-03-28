@@ -2,12 +2,14 @@ stockSoda = 3
 stockOrangeade = 5
 stockEau = 0
 encore = True
+choix = 0
 
-while encore:
+while (stockSoda + stockOrangeade + stockEau > 0) and choix != 4:
     choix = int(input("Veuillez sélectionner une boisson : \n" +
             "1. Soda \n" +
             "2. Orangeade \n" +
-            "3. Eau \n"))
+            "3. Eau \n"
+            "4. Quitter\n"))
     match choix:
         case 1 :
             if stockSoda > 0 :
@@ -27,12 +29,9 @@ while encore:
                 stockEau -= 1
             else:
                 print("Sold out! Faîtes un autre choix...")
+        case 4 :
+            print("Vous avez choissi de quitter")
         case _ : 
             print("Erreur, boisson non-disponible...")
-    
-    reponse = input("Voulez vous encore une boisson ? o/n :").lower()
-
-    if reponse != "o":
-        encore = False
-
+print("Merci d'utiliser distributeur 3000!")
 
