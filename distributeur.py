@@ -11,7 +11,7 @@ nom_boisson.append("Orangeade")
 
 total_stock = 0
 for el in stocks:
-    total_stock = total_stock +  el    
+    total_stock += el    
 
 choix = 0
 
@@ -28,6 +28,6 @@ while (total_stock > 0) and choix != 4:
             print(f"Plus de {nom_boisson[choix-1]}")
     total_stock = 0
     for el in stocks:
-        total_stock = total_stock +  el 
+        total_stock += el 
 
 print("Merci d'utiliser distributeur 3000!")
